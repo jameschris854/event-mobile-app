@@ -1,11 +1,11 @@
 {
   "expo": {
     "name": "my-app",
-    "slug": "my-app",
+    "slug": "quizapp",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
-    "scheme": "myapp",
+    "scheme": "quizapp",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "splash": {
@@ -20,7 +20,8 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.jameschris854.quizapp"
     },
     "web": {
       "bundler": "metro",
@@ -28,10 +29,31 @@
       "favicon": "./assets/images/favicon.png"
     },
     "plugins": [
-      "expo-router"
+      "expo-router",
+      "react-native-bottom-tabs",
+      [
+        "expo-build-properties",
+        {
+          "ios": {
+            "extraPods": [
+              { "name": "SDWebImage", "modular_headers": true }, // Work around for not enabling static framework, required for react-native-bottom-tabs
+              { "name": "SDWebImageSVGCoder", "modular_headers": true }
+            ]
+          }
+        }
+      ]
     ],
     "experiments": {
       "typedRoutes": true
-    }
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "e6faf1bd-cbcb-4bd9-966b-537af860c238"
+      }
+    },
+    "owner": "jameschris854"
   }
 }
