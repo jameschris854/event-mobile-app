@@ -2,10 +2,6 @@ import React, { useState } from 'react';
 import FontAwesome from '@expo/vector-icons/FontAwesome';
 import useColors from '@/hooks/useColors';
 import { BottomNavigation, Icon, Text } from 'react-native-paper';
-import TabOneScreen from '.';
-import Profile from './profile';
-import MyTests from './MyTests';
-import { BaseRoute } from 'react-native-paper/lib/typescript/components/BottomNavigation/BottomNavigation';
 import { StyleSheet, View } from 'react-native';
 import { withLayoutContext } from "expo-router";
 import { createNativeBottomTabNavigator } from "@bottom-tabs/react-navigation";
@@ -23,23 +19,10 @@ function TabBarIcon(props: {
 
 export default function TabLayout() {
   const colors = useColors();
-    const [index, setIndex] = useState(0);
-    const [routes] = useState<BaseRoute[]>([
-      { key: 'index', title: 'Home', focusedIcon: 'home', unfocusedIcon: 'home-outline', lazy: true },
-      { key: 'MyTests', title: 'MyTests', focusedIcon: 'clipboard-list', unfocusedIcon: 'clipboard-list-outline', lazy: true },
-      { key: 'profile', title: 'Profile', focusedIcon: 'account', unfocusedIcon: 'account-outline', lazy: true },
-    ]);
-  
-    const renderScene = BottomNavigation.SceneMap({
-      "index": TabOneScreen,
-      "MyTests": MyTests,
-      profile: Profile,
-    })
 
   return <>
       <Tabs
        hapticFeedbackEnabled
-       
        screenOptions={{
          tabBarActiveTintColor: colors.primary,
        }}>
@@ -53,11 +36,11 @@ export default function TabLayout() {
          }}
        />
        <Tabs.Screen
-         name="MyTests"
+         name="mytest"
          options={{
-            title: 'Explore',
+            title: 'My Tests',
             tabBarIcon: () => ({
-            uri: 'https://www.svgrepo.com/show/445112/explore-solid.svg',
+            uri: 'https://www.svgrepo.com/show/326410/i-exam-multiple-choice.svg',
           }),
          }}
        />
@@ -71,7 +54,6 @@ export default function TabLayout() {
          }}
        />
      </Tabs>
-
   </>
 
 }

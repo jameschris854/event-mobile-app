@@ -1,6 +1,6 @@
 import React from "react";
 import { Pressable, StyleSheet } from "react-native";
-import { TestList } from "@/app/(app)/(root)/(tabs)/MyTests";
+import { TestList } from "@/app/(app)/(root)/(tabs)/mytest";
 import useColors from "@/hooks/useColors";
 import { Text, Card, ProgressBar } from "react-native-paper";
 import { MD3Colors } from "react-native-paper/lib/typescript/types";
@@ -10,7 +10,7 @@ const TestCard = ({ details }: { details: typeof TestList[0] }) => {
     const colors = useColors();
     const styles = createStyles(colors)
     return (
-        <Card onPress={() => router.push(`/tests/${details.testName}`)} mode="elevated">
+        <Card onPress={() => router.navigate(`/mytest/${details.id}`)} mode="elevated">
             <Card.Title 
             title={details.testName}
             titleStyle={styles.title}

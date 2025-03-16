@@ -88,8 +88,8 @@ export const TestList = [
       "actions": Math.random() > 0.5 ? ["Resume"] : ["Start"]
   }))
 ];
-export default function MyTests() {
-  const colors = useColors()
+export default function mytest() {
+  const colors = useColors();
   return (
     <FlatList 
     contentContainerStyle={{paddingHorizontal:16}} 
