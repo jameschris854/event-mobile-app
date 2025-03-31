@@ -8,7 +8,7 @@ import React, { useEffect } from 'react';
 import 'react-native-reanimated';
 import { DefaultTheme as NavigationDefaultTheme, DarkTheme as NavigationDarkTheme ,ThemeProvider } from '@react-navigation/native';
 import { useColorScheme } from '@/components/useColorScheme';
-import { adaptNavigationTheme, Appbar, PaperProvider, useTheme } from 'react-native-paper';
+import { adaptNavigationTheme, Appbar, MD3DarkTheme, MD3LightTheme, PaperProvider, useTheme } from 'react-native-paper';
 import GlobalSnackbar from '@/components/Snackbar';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { StatusBar } from 'expo-status-bar';
@@ -22,6 +22,7 @@ export const unstable_settings = {
   // Ensure that reloading on `/modal` keeps a back button present.
   initialRouteName: 'GetStarted',
 };
+import { useMaterial3Theme } from '@pchmn/expo-material3-theme';
 
 // Prevent the splash screen from auto-hiding before asset loading is complete.
 SplashScreen.preventAutoHideAsync();
@@ -52,6 +53,7 @@ export default function RootLayout() {
 
 function RootLayoutNav() {
   const colorScheme = useTheme();
+  const { theme :SystemThemeColors  } = useMaterial3Theme();
   const { LightTheme, DarkTheme } = adaptNavigationTheme({
     reactNavigationLight: NavigationDefaultTheme,
     reactNavigationDark: NavigationDarkTheme,
@@ -62,6 +64,7 @@ function RootLayoutNav() {
     colors: {
       ...NavigationDefaultTheme.colors,
       ...LightTheme.colors,
+      ...SystemThemeColors.light
     },
   };
   
@@ -71,14 +74,20 @@ function RootLayoutNav() {
     colors: {
       ...NavigationDarkTheme.colors,
       ...DarkTheme.colors,
+      ...SystemThemeColors.dark
     },
   };
-
   const isDarkMode = useColorScheme() === 'dark';
   const theme = isDarkMode ? CombinedDarkTheme : CombinedLightTheme;
   const {top} = useSafeAreaInsets()
+
+   const paperTheme =
+   isDarkMode
+      ? { ...MD3DarkTheme, colors: SystemThemeColors.dark }
+      : { ...MD3LightTheme, colors: SystemThemeColors.light };
+
   return (
-    <PaperProvider>
+    <PaperProvider theme={paperTheme}>
       <ThemeProvider value={theme}>
         <StatusBar style='auto' backgroundColor={theme.colors.background}  />
         <View style={{paddingTop:top}} />

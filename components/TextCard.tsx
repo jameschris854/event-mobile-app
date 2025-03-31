@@ -10,7 +10,7 @@ const TestCard = ({ details }: { details: typeof TestList[0] }) => {
     const colors = useColors();
     const styles = createStyles(colors)
     return (
-        <Card onPress={() => router.navigate(`/mytest/${details.id}`)} mode="elevated">
+        <Card onPress={() => router.navigate(`/${details.id}`)} mode="elevated">
             <Card.Title 
             title={details.testName}
             titleStyle={styles.title}

@@ -1,0 +1,222 @@
+[
+  {
+    "uid": 1,
+    "Question": "Jacob heard the words of ________'s sons, saying, 'Jacob has taken all that was our father's.'",
+    "QuestionType": 1,
+    "Options": [],
+    "Answer": "Laban"
+  },
+  {
+    "uid": 2,
+    "Question": "God said to Jacob, 'Return to the land of your fathers and to your kindred, and I will be ________.",
+    "QuestionType": 1,
+    "Options": [],
+    "Answer": "With you"
+  },
+  {
+    "uid": 3,
+    "Question": "Rachel stole her father Laban's ________ before leaving Paddan-aram.",
+    "QuestionType": 1,
+    "Options": [],
+    "Answer": "Household goods"
+  },
+  {
+    "uid": 4,
+    "Question": "Laban overtook Jacob in the hill country of ________.",
+    "QuestionType": 1,
+    "Options": [],
+    "Answer": "Gilead"
+  },
+  {
+    "uid": 5,
+    "Question": "Jacob wrestled with a man until daybreak at ________, where his name was changed to Israel.",
+    "QuestionType": 1,
+    "Options": [],
+    "Answer": "Peniel"
+  },
+  {
+    "uid": 6,
+    "Question": "Esau embraced Jacob and they wept when they met at ________.",
+    "QuestionType": 1,
+    "Options": [],
+    "Answer": "Land of Seir"
+  },
+  {
+    "uid": 7,
+    "Question": "Joseph’s brothers threw him into a ________ before selling him.",
+    "QuestionType": 1,
+    "Options": [],
+    "Answer": "Pit"
+  },
+  {
+    "uid": 8,
+    "Question": "Joseph’s master in Egypt was ________, the captain of the guard.",
+    "QuestionType": 1,
+    "Options": [],
+    "Answer": "Potiphar"
+  },
+  {
+    "uid": 9,
+    "Question": "In prison, Joseph interpreted the dreams of Pharaoh’s ________ and baker.",
+    "QuestionType": 1,
+    "Options": [],
+    "Answer": "Cupbearer"
+  },
+  {
+    "uid": 10,
+    "Question": "Pharaoh’s dreams featured seven ________ cows and seven ________ cows.",
+    "QuestionType": 1,
+    "Options": [],
+    "Answer": "Fat;thin"
+  },
+  {
+    "uid": 11,
+    "Question": "Who told Jacob to return to his homeland?",
+    "QuestionType": 2,
+    "Options": ["Laban", "Rachel", "God", "Leah"],
+    "Answer": "God"
+  },
+  {
+    "uid": 12,
+    "Question": "How many years did Jacob serve Laban in total?",
+    "QuestionType": 2,
+    "Options": ["16 years", "20 years", "21 years", "14 years"],
+    "Answer": "20 years"
+  },
+  {
+    "uid": 13,
+    "Question": "What did Jacob name the place where he wrestled with God?",
+    "QuestionType": 2,
+    "Options": ["Bethel", "Mahanaim", "Peniel", "Mizpah"],
+    "Answer": "Peniel"
+  },
+  {
+    "uid": 14,
+    "Question": "How many dreams did Pharaoh have that Joseph interpreted?",
+    "QuestionType": 2,
+    "Options": ["One", "Two", "Three", "Four"],
+    "Answer": "Two"
+  },
+  {
+    "uid": 15,
+    "Question": "Joseph is the son of..",
+    "QuestionType": 2,
+    "Options": [
+      "Jacob through Bilhah",
+      "Jacob through Leah",
+      "Jacob through Zilpah",
+      "Jacob through Rachel"
+    ],
+    "Answer": "Jacob through Rachel"
+  },
+  {
+    "uid": 16,
+    "Question": "For what was Joseph sold?",
+    "QuestionType": 2,
+    "Options": [
+      "Twenty shekels of silver",
+      "Twenty shekels of gold",
+      "Thirty shekels of silver",
+      "Food and wine for lunch"
+    ],
+    "Answer": "Twenty shekels of silver"
+  },
+  {
+    "uid": 17,
+    "Question": "Who suggested selling Joseph instead of letting him die in the pit?",
+    "QuestionType": 2,
+    "Options": ["Simeon", "Reuben", "Judah", "Levi"],
+    "Answer": "Judah"
+  },
+  {
+    "uid": 18,
+    "Question": "How old was Isaac when he died?",
+    "QuestionType": 2,
+    "Options": ["120", "169", "180", "90"],
+    "Answer": "180"
+  },
+  {
+    "uid": 19,
+    "Question": "Jacob’s starting point",
+    "QuestionType": 3,
+    "Options": ["Israel"],
+    "Answer": "Paddan-aram"
+  },
+  {
+    "uid": 20,
+    "Question": "Place where Jacob wrestled with God",
+    "QuestionType": 3,
+    "Options": ["Paddan-aram"],
+    "Answer": "Peniel"
+  },
+  {
+    "uid": 21,
+    "Question": "Pharaoh’s dreams",
+    "QuestionType": 3,
+    "Options": ["Governor"],
+    "Answer": "Seven years of famine"
+  },
+  {
+    "uid": 22,
+    "Question": "Rachel’s theft",
+    "QuestionType": 3,
+    "Options": ["Seven years of famine"],
+    "Answer": "Household gods"
+  },
+  {
+    "uid": 23,
+    "Question": "Joseph’s position in Egypt",
+    "QuestionType": 3,
+    "Options": ["Household gods"],
+    "Answer": "Governor"
+  },
+  {
+    "uid": 24,
+    "Question": "Jacob’s new name",
+    "QuestionType": 3,
+    "Options": ["Peniel"],
+    "Answer": "Israel"
+  },
+  {
+    "uid": 25,
+    "Question": "Jacob loved Leah more than Rachel.",
+    "QuestionType": 4,
+    "Options": [],
+    "Answer": "FALSE"
+  },
+  {
+    "uid": 26,
+    "Question": "Laban searched Jacob’s tent for his household gods.",
+    "QuestionType": 4,
+    "Options": [],
+    "Answer": "TRUE"
+  },
+  {
+    "uid": 27,
+    "Question": "Jacob made a covenant with Laban at Mizpah.",
+    "QuestionType": 4,
+    "Options": [],
+    "Answer": "TRUE"
+  },
+  {
+    "uid": 28,
+    "Question": "Joseph’s brothers planned to kill him but later sold him.",
+    "QuestionType": 4,
+    "Options": [],
+    "Answer": "TRUE"
+  },
+  {
+    "uid": 29,
+    "Question": "Pharaoh’s dreams predicted seven years of abundance and seven years of famine.",
+    "QuestionType": 4,
+    "Options": [],
+    "Answer": "TRUE"
+  },
+  {
+    "uid": 30,
+    "Question": "Potiphar’s wife falsely accused Joseph of theft.",
+    "QuestionType": 4,
+    "Options": [],
+    "Answer": "FALSE"
+  }
+]

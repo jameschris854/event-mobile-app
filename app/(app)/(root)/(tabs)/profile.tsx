@@ -1,4 +1,3 @@
-import Colors from "@/constants/Colors";
 import useAuthStore from "@/hooks/stores/useAuthStore";
 import useColors from "@/hooks/useColors";
 import { FontAwesome } from "@expo/vector-icons";
@@ -16,7 +15,7 @@ const Profile = () => {
     const { user } = useAuthStore();
     
     return (
-        <View style={{ flex: 1,backgroundColor:colors.background }}>
+        <View style={{ flex: 1 }}>
             <View style={{ flex: 0.5, backgroundColor: colors.primary }} >
                 <Surface style={styles.profilePicContainer}>
                     <FontAwesome color={colors.outline} name="user" style={{fontSize:60}} />
