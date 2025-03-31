@@ -23,11 +23,13 @@ export const unstable_settings = {
   initialRouteName: 'GetStarted',
 };
 import { useMaterial3Theme } from '@pchmn/expo-material3-theme';
+import useAuthStore from '@/hooks/stores/useAuthStore';
 
 // Prevent the splash screen from auto-hiding before asset loading is complete.
 SplashScreen.preventAutoHideAsync();
 
 export default function RootLayout() {
+  const {init} = useAuthStore()
   const [loaded, error] = useFonts({
     SpaceMono: require('../assets/fonts/SpaceMono-Regular.ttf'),
     ...FontAwesome.font,
@@ -38,7 +40,9 @@ export default function RootLayout() {
     if (error) throw error;
   }, [error]);
 
-  useEffect(() => {
+  useEffect(() => 
+  {
+    init()
     if (loaded) {
       SplashScreen.hideAsync();
     }
@@ -48,11 +52,10 @@ export default function RootLayout() {
     return null;
   }
 
-  return <RootLayoutNav />;
+  return <AppLayout />;
 }
 
-function RootLayoutNav() {
-  const colorScheme = useTheme();
+function AppLayout() {
   const { theme :SystemThemeColors  } = useMaterial3Theme();
   const { LightTheme, DarkTheme } = adaptNavigationTheme({
     reactNavigationLight: NavigationDefaultTheme,
@@ -91,7 +94,7 @@ function RootLayoutNav() {
       <ThemeProvider value={theme}>
         <StatusBar style='auto' backgroundColor={theme.colors.background}  />
         <View style={{paddingTop:top}} />
-        <Slot initialRouteName='(app)' /> 
+        <Stack screenOptions={{headerShown:false,animation:"fade"}} /> 
         <GlobalSnackbar />
       </ThemeProvider>
     </PaperProvider>
